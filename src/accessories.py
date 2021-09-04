@@ -9,6 +9,8 @@ GITHUB_OWNER = os.environ.get("GITHUB_OWNER", '') #username of github owner
 REPO_NAME = os.environ.get("REPO_NAME", "")
 PERMISSION = os.environ.get("PERMISSION", "")
 TOKEN = os.environ.get("TOKEN", "") #personal authentication token for github account
+FREQUENCY_IN_MINUTES = int (os.environ.get("FREQUENCY_IN_MINUTES", 1)) #frequency in minutes cron job should run
+
 
 #Environment Variables Automatically Set By main.sh Script
 
