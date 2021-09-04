@@ -34,7 +34,7 @@ def add_users():
                             logging.info(print("Response for get user status is ", get_api_response.status_code))
                             logs.write('\n'+"Response for get user status of " + str(username) + " is " + str(get_api_response.status_code))
                             if get_api_response.status_code == 404: #user is not a collaborator
-                                logs.write('\n' + "User " + str(username) + "is not yet a collaborator. Attempting to send collaboration request...")
+                                logs.write('\n' + "User " + str(username) + " is not yet a collaborator. Attempting to send collaboration request...")
                                 put_api_response = put(api_url, headers=headers, json = params)
                                 if put_api_response.status_code == 201:
                                     logging.info(print("Successfuly Sent Collaboration Request To " + str(username)))
@@ -43,7 +43,7 @@ def add_users():
                                     logging.error(print('Failed to Send Collaboration Request To ' + str(username) + ' failed with statusCode: '+ str(put_api_response.status_code)))
                                     logs.write('\n'+'Failed to Send Collaboration Request To ' + str(username) + ' failed with statusCode: '+ str(put_api_response.status_code))
                             else:
-                                logs.write('\n' + "User " + str(username) + "is already  a collaborator. Skipping sending collaboration request")
+                                logs.write('\n' + "User " + str(username) + " is already  a collaborator. Skipping sending collaboration request")
                         except Exception as e:
                             logging.error(print('Error!', e))
                             logs.write('\n' + 'Error!' + str(e))
