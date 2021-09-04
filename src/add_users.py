@@ -43,7 +43,7 @@ def add_users():
                                     logging.error(print('Failed to Send Collaboration Request To ' + str(username) + ' failed with statusCode: '+ str(put_api_response.status_code)))
                                     logs.write('\n'+'Failed to Send Collaboration Request To ' + str(username) + ' failed with statusCode: '+ str(put_api_response.status_code))
                             else:
-                                logs.write('\n' + "User " + str(username) + "is already  a collaborator. Skipping sending collaboration request)
+                                logs.write('\n' + "User " + str(username) + "is already  a collaborator. Skipping sending collaboration request")
                         except Exception as e:
                             logging.error(print('Error!', e))
                             logs.write('\n' + 'Error!' + str(e))
